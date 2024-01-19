@@ -8,15 +8,14 @@
 void counting_sort(int *array, size_t size)
 {
 	int *count, *sorted, i, max;
-	long unsigned int x;
 
 	if (array == NULL || size < 2)
 		return;
 	max = array[0];
-	for (x = 1; x < size; x++)
+	for (i = 1; i < (int)size; i++)
 	{
-		if (array[x] > max)
-			max = array[x];
+		if (array[i] > max)
+			max = array[i];
 	}
 	sorted = malloc(sizeof(int) * size);
 	count = malloc(sizeof(int) * (max + 1));
@@ -28,18 +27,18 @@ void counting_sort(int *array, size_t size)
 	}
 	for (i = 0; i < (max + 1); i++)
 		count[i] = 0;
-	for (x = 0; x < size; x++)
-		count[array[x]] += 1;
+	for (i = 0; i < (int)size; i++)
+		count[array[i]] += 1;
 	for (i = 0; i < (max + 1); i++)
 		count[i] += count[i - 1];
 	print_array(count, max + 1);
-	for (x = 0; x < size; x++)
+	for (i = 0; i < (int)size; i++)
 	{
-		sorted[count[array[x]] - 1] = array[x];
-		count[array[x]] -= 1;
+		sorted[count[array[i]] - 1] = array[i];
+		count[array[i]] -= 1;
 	}
-	for (x = 0; x < size; x++)
-		array[x] = sorted[x];
+	for (i = 0; i < (int)size; i++)
+		array[i] = sorted[i];
 	free(count);
 	free(sorted);
 }
