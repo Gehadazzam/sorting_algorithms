@@ -1,5 +1,9 @@
 #include "sort.h"
 
+int max_value(int *array, size_t size);
+void counting_sort_radix(int *array, size_t size, int exp);
+void radix_sort(int *array, size_t size);
+
 /**
  * max_value - Get the maximum value in an array of integers
  * @array: An array of integers
