@@ -1,6 +1,9 @@
 #ifndef SORT_H
 #define SORT_H
 
+#define UP_Sort 0
+#define DOWN_Sort 1
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
