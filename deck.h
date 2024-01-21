@@ -3,7 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+*enum kind_e - represent 4 status for playing card
+*@SPADE: first one
+*@HEART: seconed one
+*@CLUB: the third
+*@DIAMOND: fourth one
+*/
 typedef enum kind_e
 {
 	SPADE = 0,
