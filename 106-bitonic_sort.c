@@ -1,11 +1,5 @@
 #include "sort.h"
 
-void bitonic_compare(int *array, size_t i, size_t j, char choose);
-void bitonic_merge(int *array, size_t size, size_t low,
-size_t count, char choose);
-void bitonic_sort_recursive(int *array, size_t size,
-size_t low, size_t count, char choose);
-
 /**
  * bitonic_compare - Compare elements based on direction
  * @array: Array of integers

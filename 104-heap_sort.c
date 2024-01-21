@@ -6,9 +6,9 @@
 */
 void swap(int *x, int *z)
 {
-	int temp = *x;
+	int swap = *x;
 	*x = *z;
-	*z = temp;
+	*z = swap;
 }
 /**
 *heapify - Maintains heap property at a given index
