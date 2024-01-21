@@ -37,6 +37,7 @@ void bitonic_merge(int *array, size_t size, size_t low,
 size_t count, char choose);
 void bitonic_sort_recursive(int *array, size_t size,
 size_t low, size_t count, char choose);
+void bitonic_sort(int *array, size_t size);
 
 /*radix*/
 int max_value(int *array, size_t size);
