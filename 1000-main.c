@@ -2,7 +2,10 @@
 #include <stdio.h>
 #include "deck.h"
 
-
+/**
+ * print_deck - Print the content of a deck of cards.
+ * @deck: A pointer to the head of a deck_node_t doubly-linked list.
+ */
 void print_deck(const deck_node_t *deck)
 {
 	size_t i;
@@ -21,6 +24,11 @@ void print_deck(const deck_node_t *deck)
 	}
 }
 
+/**
+ * init_deck - Initialize a deck of cards from an array of card_t.
+ * @cards: An array of card_t containing 52 cards.
+ * Return: A pointer to the head of the deck_node_t doubly-linked list.
+ */
 deck_node_t *init_deck(const card_t cards[52])
 {
 	deck_node_t *deck;
@@ -44,6 +52,10 @@ deck_node_t *init_deck(const card_t cards[52])
 	return (deck);
 }
 
+/**
+ * main - Entry point of the program.
+ * Return: Always 0 (success).
+ */
 int main(void)
 {
 	card_t cards[52] = {
